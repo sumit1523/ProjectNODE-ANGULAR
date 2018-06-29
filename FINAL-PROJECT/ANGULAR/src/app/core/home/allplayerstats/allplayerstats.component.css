@@ -1,0 +1,43 @@
+.brder{
+    border : 1px #ECE5E5 solid;
+}
+
+
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 12px;
+    padding-left: 90px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #9FA154;
+    color: white;
+}
+
+
+img {
+    padding-top: 50px;
+    padding-left: 80px;
+}
+
+
+.odd {
+    background-color: #EAEEEF;
+}
+
+.even {
+    background-color: #E5E5D3;
+}

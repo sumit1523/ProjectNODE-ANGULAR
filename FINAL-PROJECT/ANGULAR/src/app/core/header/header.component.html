@@ -1,0 +1,39 @@
+<div class="header-container">
+  <div class="row">
+    <div class="col-md-2">
+      <a href="#"><img src="../../../assets/images/logo.png" class="img-dimension"/></a>
+    </div>
+    <div style=" margin-right: 5px;">
+      <div class="col-md-1 col-md-offset-5">
+        <button type="button" class="btn header-container" routerLink="/shopping/cart">
+          <i class="fa fa-shopping-cart top-header-icons" aria-hidden="true"></i>
+        </button> 
+      </div>
+
+      <div *ngIf="!isLogged" class="col-md-1 col-md-offset-2" >
+        <button type="button" class="btn header-container fa fa-sign-in top-header-icons" (click)="openLogin()"></button> <p style="color: white">&nbsp;&nbsp;&nbsp;&nbsp;Login</p>
+      </div>
+      <div *ngIf="isLogged" class=" col-md-3"  style='float : right'>
+       
+        <table>
+          <tr>
+            <td><p style='color:#C7B2B2'><strong>Welcom {{user}}</strong></p></td>
+            <td><button type="button" class="btn header-container fa fa-sign-out top-header-icons" (click)="logout()"></button><p style="color: white">&nbsp;&nbsp;&nbsp;Logout</p></td> 
+          </tr>
+        </table>
+     
+      </div>
+
+    </div>
+  </div>
+  <div class="row">
+    <ul class="nav nav-tabs">
+      <li role="presentation" (click)="goToHome()" style="margin-left: 12%" class="active header-navs" >Home</li>
+      <li role="presentation" (click)="goTovideos()" class="header-navs">Videos</li>
+      <li role="presentation" (click)="goToStats()" class="header-navs">Players-Stats</li>
+      <li role="presentation" (click)="goToShopping()" class="header-navs">Merchandise</li>
+      <li role="presentation" (click)="goToProfile()" class="header-navs">Profile Page</li>
+      <li role="presentation" (click)="goToAboutUS()" class="header-navs">About US</li>
+    </ul>
+  </div>
+</div>

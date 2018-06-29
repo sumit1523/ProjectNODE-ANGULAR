@@ -1,0 +1,186 @@
+
+<div *ngIf="playerDetailsObject!=null" >
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <h3></h3>
+        <img src='{{playerDetailsObject.playerDetails[0].profileImage}}' />
+      </div>
+      <div class="col-sm-6 ">
+        <h3>About {{playerDetailsObject.playerDetails[0].playerName}} :</h3>
+        <p>{{playerDetailsObject.playerDetails[0].profileDescription}}</p> 
+      </div>
+    </div>
+  </div>    
+  
+  <hr/>
+  
+  <h4 align = 'center'><strong>Player Profile Details</strong></h4>
+  
+  <div class="container">
+    <table id= 'detailsTable' class="table table-bordered">
+      <thead>
+        <tr>
+        </tr>
+      </thead>
+      <tbody>
+        <tr align='center'>
+          <th scope="row">1</th>
+          <td><strong>Player Name</strong></td>
+          <td>{{playerDetailsObject.playerDetails[0].playerName}}</td>
+        </tr>
+        <tr align='center'>
+          <th scope="row">2</th>
+          <td><strong>Current Age</strong></td>
+          <td>{{playerDetailsObject.playerDetails[0].CurrentAge}}</td>
+        </tr>
+        <tr align='center'>
+          <th scope="row">3</th>
+          <td><strong>Player Type</strong></td>
+          <td>{{playerDetailsObject.playerDetails[0].playerType}}</td>
+        </tr>
+        <tr align='center'>
+          <th scope="row">4</th>
+          <td><strong>Batting Style</strong></td>
+          <td>{{playerDetailsObject.playerDetails[0].BattingStyle}}</td>
+        </tr>
+        <tr align='center'>
+          <th scope="row">5</th>
+          <td><strong>Bowling Style</strong></td>
+          <td>{{playerDetailsObject.playerDetails[0].BowlingStyle}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <h3 align = 'center' style='color:brown'><strong>Statistics Of {{playerDetailsObject.playerDetails[0].playerName}}</strong></h3>
+  
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <table class="table table-bordered" id="customers">
+          <thead>
+            <tr>
+              <th  align = 'center' scope="col" colspan="2"><span align='center'>ODI STATS</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr align = 'center'>
+              <td><strong>Matches Played</strong></td>
+              <td>{{playerDetailsObject.onedayMatch[0].matchesPlayed}}</td>
+            </tr>
+            <tr align = 'center'>
+              <td><strong>Total Run Scored</strong></td>
+              <td>{{playerDetailsObject.onedayMatch[0].totalRunSored}}</td>
+            </tr>
+            <tr align = 'center'>
+              <td><strong>Average</strong></td>
+              <td>{{playerDetailsObject.onedayMatch[0].average}}</td>
+            </tr>
+            <tr align = 'center'>
+              <td><strong>Total Hundreds</strong></td>
+              <td>{{playerDetailsObject.onedayMatch[0].totalHundreads}}</td>
+            </tr>
+            <tr align = 'center'>
+              <td><strong>Total Fifties</strong></td>
+              <td>{{playerDetailsObject.onedayMatch[0].totalFifties}}</td>
+            </tr>
+            <tr align = 'center'>
+              <td><strong>Wickets taken</strong></td>
+              <td>{{playerDetailsObject.onedayMatch[0].wicketsTaken}}</td>
+            </tr>
+            <tr align = 'center'>
+              <td><strong>Economy</strong></td>
+              <td>{{playerDetailsObject.onedayMatch[0].economy}}</td>
+            </tr>
+            
+            
+          </tbody>
+        </table>
+      </div>
+      <div class="col-sm-4">
+        <table class="table table-bordered" id="customers">
+          <thead>
+            <tr>
+              <th  align = 'center' scope="col" colspan="2"><span align='center'>TEST STATS</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr align = 'center'>
+              <td><strong>Matches Played</strong></td>
+              <td>{{playerDetailsObject.testMatch[0].matchesPlayed}}</td>
+            </tr>
+            <tr align = 'center'>
+              <td><strong>Total Run Scored</strong></td>
+              <td>{{playerDetailsObject.testMatch[0].totalRunSored}}</td>
+            </tr>
+            <tr align = 'center'>
+              <td><strong>Average</strong></td>
+              <td>{{playerDetailsObject.testMatch[0].average}}</td>
+            </tr>
+            <tr align = 'center'>
+              <td><strong>Total Hundreds</strong></td>
+              <td>{{playerDetailsObject.testMatch[0].totalHundreads}}</td>
+            </tr>
+            <tr align = 'center'>
+              <td><strong>Total Fifties</strong></td>
+              <td>{{playerDetailsObject.testMatch[0].totalFifties}}</td>
+            </tr>
+            <tr align = 'center'>
+              <td><strong>Wickets taken</strong></td>
+              <td>{{playerDetailsObject.testMatch[0].wicketsTaken}}</td>
+            </tr>
+            <tr align = 'center'>
+              <td><strong>Economy</strong></td>
+              <td>{{playerDetailsObject.testMatch[0].economy}}</td>
+            </tr>
+            
+            
+          </tbody>
+        </table>
+      </div>
+      <div class="col-sm-4">
+        <table class="table table-bordered" id="customers">
+          <thead>
+            <tr>
+              <th  align = 'center' scope="col" colspan="2"><span align='center'>T-20 STATS</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr align = 'center'>
+              <td><strong>Matches Played</strong></td>
+              <td>{{playerDetailsObject.tTwenty[0].matchesPlayed}}</td>
+            </tr>
+            <tr align = 'center'>
+              <td><strong>Total Run Scored</strong></td>
+              <td>{{playerDetailsObject.tTwenty[0].totalRunSored}}</td>
+            </tr>
+            <tr align = 'center'>
+              <td><strong>Average</strong></td>
+              <td>{{playerDetailsObject.tTwenty[0].Average}}</td>
+            </tr>
+            <tr align = 'center'>
+              <td><strong>Total Hundreds</strong></td>
+              <td>{{playerDetailsObject.tTwenty[0].totalHundreads}}</td>
+            </tr>
+            <tr align = 'center'>
+              <td><strong>Total Fifties</strong></td>
+              <td>{{playerDetailsObject.tTwenty[0].totalFifties}}</td>
+            </tr>
+            <tr align = 'center'>
+              <td><strong>Wickets taken</strong></td>
+              <td>{{playerDetailsObject.tTwenty[0].wicketsTaken}}</td>
+            </tr>
+            <tr align = 'center'>
+              <td><strong>Economy</strong></td>
+              <td>{{playerDetailsObject.tTwenty[0].Economy}}</td>
+            </tr>
+          </tbody>
+        </table>   
+      </div>
+    </div>
+  </div>
+  
+</div>

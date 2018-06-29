@@ -1,0 +1,29 @@
+.header-container {
+    background-color: #6E6EB2;
+}
+.img-dimension {
+    height: 65px;
+}
+.top-header-icons{
+    color: white;
+    font-size: 40px;
+    margin-top: 2%;
+    margin-right: 0px;
+}
+.header-navs {
+    color: white;
+    font-size: 25px;
+    margin-left: 3%;
+    cursor: pointer; 
+}
+
+.nav > .header-navs:hover
+{
+    transition: color 0.5s ease;
+    color:#530707;
+}
+
+button:hover{
+    transition: background-color 0.5s ease;
+    background-color:#530707;
+}

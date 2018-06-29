@@ -1,0 +1,69 @@
+<div *ngIf="allvideos">
+
+	<div class='container'>
+		<div class="row">
+			<div class="col-md-8">
+				<iframe class="e2e-iframe-trusted-src" width="740" height="420" [src]="trustedUrl" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				<h3>{{currentVideo.videoTitle}}</h3>
+				<div class="col-md-2 col-md-offset-5" (click)="liked()">
+					<table><tr>
+						<td>Like &nbsp;</td>
+						<button [disabled]='isLiked'><i class="fa fa-thumbs-o-up fa-2x" aria-hidden="true"></i></button>
+						<td style="color: green">&nbsp; {{currentVideoTotalLike}}</td>
+					</tr></table>
+				</div>
+				<div class="col-md-3 col-md-offset-2" (click)="disliked()">
+					<table><tr>
+						<td>Dislike &nbsp;</td>
+						<button [disabled]='isDisliked'> <i class="fa fa-thumbs-o-down fa-2x" aria-hidden="true" ></i> </button>
+						<td style="color: red">&nbsp; {{currentVideoTotalDislike}}</td>
+					</tr></table>
+				</div>
+				<br/><hr/>
+				<h4>Description :</h4><h5>{{currentVideo.videoDescription}}</h5>
+				<br/><hr/>
+				<form (submit)="commentSubmit($event)">
+					<div class="row">
+						<div class='col-md-2'>
+							<label>Comment : </label>
+						</div>
+						<div class='col-md-4'>
+							<textarea rows="1" cols="60" type='text' id='comment'></textarea>
+						</div>
+						<div class='col-md-1 col-md-offset-4'>
+							<input type='submit' value='submit' />
+						</div>
+					</div>
+				</form>
+				<hr/>
+
+				<div class='col-md-12' *ngFor="let commentObject of currentVideoAllComments">
+					<div class="row">
+						<div class="col-md-3">
+							<p><strong>{{commentObject.user}} :</strong></p>
+						</div>
+						<div class="col-md-9">
+							<p>{{commentObject.comment}}</p>
+						</div>
+					</div>	
+				</div>
+			</div>
+			
+
+			<div class="col-md-4" >
+				<div class="col-md-12" *ngFor="let video of allvideos">
+					<div class="row p" (click)="getOnScreen(video.videoID)">
+						<div class="col-md-5">
+							<img src="{{video.thumbnails}}">
+						</div>
+						<div class="col-md-7">
+							<h5>{{video.videoTitle}}</h5>
+						</div>
+					</div>
+					<hr/>
+				</div>
+			</div>	
+		</div>
+	</div>
+
+</div>

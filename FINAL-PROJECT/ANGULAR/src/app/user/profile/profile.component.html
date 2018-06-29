@@ -1,0 +1,59 @@
+<div *ngIf='userData'>
+  <div>
+    <div>
+      <h2 align='center'>Welcome {{userData.name}}</h2>
+    </div>
+    
+    <div class="container">
+      <div class="col-md-10 col-md-offset-1">
+        <div class='row'>
+          <div class="col-md-4">
+            <label>Registraion Id :</label>
+          </div>
+          <div class="col-md-6">
+            <p>{{userData._id}}</p>
+          </div>
+        </div>
+        
+        <div class='row'>
+          <div class="col-md-4">
+            <label>Name :</label>
+          </div>
+          <div class="col-md-6">
+            <p>{{userData.name}}</p>
+          </div>
+        </div>
+        
+        <div class='row'>
+          <div class="col-md-4">
+            <label>Email :</label>
+          </div>
+          <div class="col-md-6">
+            <p>{{userData.email}}</p>
+          </div>
+        </div>  
+      </div> 
+    </div>
+  </div>
+  
+  <div>
+    <div align='center'><h2>Change Password Here</h2></div>
+    
+    <form (submit)="changePassword($event)" >
+      <div class="container">
+        
+        <label><b>New Password</b></label>
+        <input type="text" id="pass" placeholder="Password" required minlength="4">
+        
+        <label><b>Retype new Password</b></label>
+        <input type="password" id='repass' placeholder="Password" required minlength="4">
+        
+        <div align="center" class="clearfix">
+          <button id='login' type="submit" class="signupbtn">Change</button>
+        </div>
+      </div>
+    </form>
+    
+  </div>
+  
+</div>

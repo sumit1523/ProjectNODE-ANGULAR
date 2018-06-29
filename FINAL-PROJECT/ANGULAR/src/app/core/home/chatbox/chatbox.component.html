@@ -1,0 +1,25 @@
+
+<body *ngIf="!toggleDisp">
+    <div id="mario-chat">
+        <div id="chat-window">
+            <div id="output">
+                <div id="feedback" class="containerBox" *ngFor="let question of questions" >
+                   <p (click)="showAnswers()"> {{ question }}</p><br>
+                 </div>
+                 <div class="containerBox darker" *ngIf = "!answerToggle">
+                    <span style="color:green;" > {{ randomAns }}<br></span>
+                  </div>
+                <p *ngFor="let messageDisp of messages">
+                  {{ messageDisp }}
+                </p>
+            </div>
+           
+        </div>
+        
+        <input id="message" #message  name = "message" type="text" placeholder="Message" (click) = "checkLogged()">
+        <button class= "buttonClass" id="send" name="send" (click) ="startChat(message)">Send</button>
+    </div>
+
+   
+</body>
+<button class="btn btn-danger" style="" (click)= "onToggleDisp()">Chat</button>

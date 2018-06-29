@@ -1,0 +1,58 @@
+<div *ngIf="productList.length===0">
+  <h1 align='center' style='color:red; margin-top:150px;margin-bottom:150px;'>CART IS EMPTY</h1>
+</div>
+<div *ngIf="productList.length!==0">
+    <div class="container">
+        <table id="cart" class="table table-hover table-condensed">
+          <thead>
+            <tr>
+              <th style="width:50%">Product</th>
+              <th style="width:10%">Price</th>
+              <th style="width:8%" >Quantity</th>
+              <th style="width:22%" class="text-center">Subtotal</th>
+              <th style="width:10%"></th>
+            </tr>
+          </thead>
+          <tbody>
+           
+            <tr *ngFor="let product of productList">
+              <td data-th="Product">
+                <div class="row">
+                  <div class="col-sm-2 hidden-xs"><img src="{{product.image}}" alt="..." class="img-responsive"/></div>
+                  <div class="col-sm-10">
+                    <h4 class="nomargin">{{product.ProductName}}</h4>
+                    <p>{{product.Description}}</p>
+                  </div>
+                </div>
+              </td>
+              <td data-th="Price"><span class="currency">&#x20b9;</span>{{product.price}}</td>
+              <td data-th="Quantity">
+                  <input type="number" class="form-control text-center" value="1" disabled title="Products in high Demand. Limit 1 product per Order">
+              </td>
+              <td data-th="Subtotal" class="text-center">{{product.price}}</td>
+              <td class="actions" data-th="">
+                <button (click)='deleteItem(product._id)' class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i></button>								
+              </td>
+            </tr>
+          
+          </tbody>
+          <tfoot>
+            <tr class="visible-xs">
+              <td class="text-center"><strong></strong></td>
+            </tr>
+            <tr>
+              <td><a routerLink="/shopping/display" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
+              <td colspan="2" class="hidden-xs"></td>
+              <td class="hidden-xs text-center"><strong>Total &nbsp;<span class="currency">&#x20b9;</span>{{ totalPrice }}</strong></td>
+              <td><a href="#" class="btn btn-success btn-block">Checkout <i class="fa fa-angle-right"></i></a></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+</div>
+
+
+
+
+

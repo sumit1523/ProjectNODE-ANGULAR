@@ -1,0 +1,21 @@
+<div class="container">
+  <div align='center'>
+    <h3 style='color:red'>Please Login to Proceed</h3>
+  </div>
+  <hr/>
+  
+  
+  <form (submit)="afterSubmit($event)" >
+
+      
+      <label><b>Login ID</b></label>
+      <input type="text" id="loginid" placeholder="Enter email ID" required>
+      
+      <label><b>Password</b></label>
+      <input type="password" id='password' placeholder="Enter Password" required minlength="4">
+      
+      <div align="center" class="clearfix">
+        <button id='login' type="submit" class="signupbtn">Login</button>
+      </div>
+
+  </form>

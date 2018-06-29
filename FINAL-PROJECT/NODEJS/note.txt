@@ -1,0 +1,18 @@
+npmjs.com-----> minimist package--------->
+
+process.env.NODE_ENV = process.env.NODE_ENV ||'dev'
+
+node .\server.js--> run server.js
+
+server IP and port Config on server.js
+
+
+npm install forever -g, Node Forever-> In production environment . To keep the DB restarted after crash
+configure forever.json file
+
+NGINX
+
+npm install jsonfile-----> to configure/maintain the config file.
+
+
+
